@@ -5,21 +5,22 @@
 
 ## All Papers (Classification according to Subject) <!-- omit from toc --> 
 - [Fuzzing (LLM)](#fuzzing-llm)
+  - [Large Language Model guided Protocol Fuzzing, *NDSS'24, Abhik Roychoudhury*, NUS](#large-language-model-guided-protocol-fuzzing-ndss24-abhik-roychoudhury-nus)
   - [Prompt Fuzzing for Fuzz Driver Generation, *CCS'24, Peng Chen*](#prompt-fuzzing-for-fuzz-driver-generation-ccs24-peng-chen)
   - [Fuzz4All: Universal Fuzzing with Large Language Models, *ICSE'24, LingMing Zhang*](#fuzz4all-universal-fuzzing-with-large-language-models-icse24-lingming-zhang)
   - [KernelGPT: Enhanced Kernel Fuzzing via Large Language Models, *Arxiv’23, Lingming Zhang*](#kernelgpt-enhanced-kernel-fuzzing-via-large-language-models-arxiv23-lingming-zhang)
-  - [White-box Compiler Fuzzing Empowered by Large Language Models, *Arxiv'23, Lingming Zhang*](#white-box-compiler-fuzzing-empowered-by-large-language-models-arxiv23-lingming-zhang)
-  - [Large language models are edge-case fuzzers: Testing deep learning libraries via FuzzGPT, *Arxiv’23, Lingming Zhang*](#large-language-models-are-edge-case-fuzzers-testing-deep-learning-libraries-via-fuzzgpt-arxiv23-lingming-zhang)
+  - [WhiteFox: White-Box Compiler Fuzzing Empowered by Large Language Models, *OOPSLA'24, Lingming Zhang*](#whitefox-white-box-compiler-fuzzing-empowered-by-large-language-models-oopsla24-lingming-zhang)
+  - [Large Language Models are Edge-Case Generators: Crafting Unusual Programs for Fuzzing Deep Learning Libraries, *ICSE'24, Lingming Zhang*](#large-language-models-are-edge-case-generators-crafting-unusual-programs-for-fuzzing-deep-learning-libraries-icse24-lingming-zhang)
   - [Large Language Models are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models, *ISSTA'23, Lingming Zhang*](#large-language-models-are-zero-shot-fuzzers-fuzzing-deep-learning-libraries-via-large-language-models-issta23-lingming-zhang)
   - [Augmenting Greybox Fuzzing with Generative AI, *Arxiv’23, Heng Yin*](#augmenting-greybox-fuzzing-with-generative-ai-arxiv23-heng-yin)
 - [Fuzzing (Traditional AI Method)](#fuzzing-traditional-ai-method)
-  - [Neuzz: Efficient fuzzing with neural program smoothing, *SP‘19, Dongdong She*](#neuzz-efficient-fuzzing-with-neural-program-smoothing-sp19-dongdong-she)
-  - [MTFuzz: Fuzzing with a multi-task neural network, *ECSE/FSE‘20, Dongdong She*](#mtfuzz-fuzzing-with-a-multi-task-neural-network-ecsefse20-dongdong-she)
   - [Evaluating and Improving Neural Program-Smoothing-based Fuzzing, *ICSE’22, Lingming Zhang*](#evaluating-and-improving-neural-program-smoothing-based-fuzzing-icse22-lingming-zhang)
+  - [MTFuzz: Fuzzing with a multi-task neural network, *ECSE/FSE‘20, Dongdong She*](#mtfuzz-fuzzing-with-a-multi-task-neural-network-ecsefse20-dongdong-she)
+  - [Neuzz: Efficient fuzzing with neural program smoothing, *SP‘19, Dongdong She*](#neuzz-efficient-fuzzing-with-neural-program-smoothing-sp19-dongdong-she)
 - [Unit Test Generation (LLM)](#unit-test-generation-llm)
-  - [Code Generation Tools (Almost) for Free? A Study of Few-Shot, Pre-Trained Language Models on Code, *Arxiv’22*](#code-generation-tools-almost-for-free-a-study-of-few-shot-pre-trained-language-models-on-code-arxiv22)
-  - [ChatUniTest: a ChatGPT-based automated unit test generation tool, *Arxiv'23*](#chatunitest-a-chatgpt-based-automated-unit-test-generation-tool-arxiv23)
+  - [ChatUniTest: A Framework for LLM-Based Test Generation, *FSE'24*](#chatunitest-a-framework-for-llm-based-test-generation-fse24)
   - [Codamosa: Escaping coverage plateaus in test generation with pre-trained large language models, *ICSE’23, Caroline Lemieux*](#codamosa-escaping-coverage-plateaus-in-test-generation-with-pre-trained-large-language-models-icse23-caroline-lemieux)
+  - [Code Generation Tools (Almost) for Free? A Study of Few-Shot, Pre-Trained Language Models on Code, *Arxiv’22*](#code-generation-tools-almost-for-free-a-study-of-few-shot-pre-trained-language-models-on-code-arxiv22)
 - [Unit Test Case Generation (Traditional AI Method)](#unit-test-case-generation-traditional-ai-method)
   - [Unit Test Case Generation with Transformers and Focal Context, *Arxiv’20, Microsoft*](#unit-test-case-generation-with-transformers-and-focal-context-arxiv20-microsoft)
 - [Program Repair (LLM)](#program-repair-llm)
@@ -31,10 +32,10 @@
 - [Program Repair (Traditional AI method)](#program-repair-traditional-ai-method)
   - [Neural program repair with execution-based backpropagation, *ICSE'22*](#neural-program-repair-with-execution-based-backpropagation-icse22)
 - [Code Representation](#code-representation)
-  - [Convolutional Neural Networks over Tree Structures for Programming Language Processing, *AAAI'16*](#convolutional-neural-networks-over-tree-structures-for-programming-language-processing-aaai16)
-  - [Graphcodebert: Pre-training code representations with data flow, *ICLR'21, Microsoft Research Asia*](#graphcodebert-pre-training-code-representations-with-data-flow-iclr21-microsoft-research-asia)
-  - [Structcoder: Structure-aware transformer for code generation, *arXiv'22*](#structcoder-structure-aware-transformer-for-code-generation-arxiv22)
+  - [Structcoder: Structure-aware transformer for code generation, *TKDD'24*](#structcoder-structure-aware-transformer-for-code-generation-tkdd24)
   - [Unixcoder: Unified crossmodal pre-training for code representation, *ACL'22*](#unixcoder-unified-crossmodal-pre-training-for-code-representation-acl22)
+  - [Graphcodebert: Pre-training code representations with data flow, *ICLR'21, Microsoft Research Asia*](#graphcodebert-pre-training-code-representations-with-data-flow-iclr21-microsoft-research-asia)
+  - [Convolutional Neural Networks over Tree Structures for Programming Language Processing, *AAAI'16*](#convolutional-neural-networks-over-tree-structures-for-programming-language-processing-aaai16)
 - [Code Generation](#code-generation)
   - [Jigsaw: Large Language Models meet Program Synthesis, *ICSE’22, Microsoft*](#jigsaw-large-language-models-meet-program-synthesis-icse22-microsoft)
   - [Competition-level code generation with alphacode, *Science'22*](#competition-level-code-generation-with-alphacode-science22)
@@ -42,6 +43,17 @@
   - [ProGraML: Graph-based Deep Learning for Program Optimization and Analysis, *Arxiv'20*](#programl-graph-based-deep-learning-for-program-optimization-and-analysis-arxiv20)
 
 ## Fuzzing (LLM)
+### Large Language Model guided Protocol Fuzzing, *NDSS'24, Abhik Roychoudhury*, NUS
+- [paper](https://www.ndss-symposium.org/ndss-paper/large-language-model-guided-protocol-fuzzing/)
+- [code](https://github.com/ChatAFLndss/ChatAFL)
+
+
+
+**Abstract:**
+How to find security flaws in a protocol implementation without a machine-readable specification of the protocol? Facing the internet, protocol implementations are particularly security-critical software systems where inputs must adhere to a specific structure and order that is often informally specified in hundreds of pages in natural language (RFC). Without some machine-readable version of that protocol, it is difficult to automatically generate valid test inputs for its implementation that follow the required structure and order. It is possible to partially alleviate this challenge using mutational fuzzing on a set of recorded message sequences as seed inputs. However, the set of available seeds is often quite limited and will hardly cover the great diversity of protocol states and input structures.
+
+In this paper, we explore the opportunities of systematic interaction with a pre-trained large language models (LLM) which has ingested millions of pages of human-readable protocol specifications, to draw out machine-readable information about the protocol that can be used during protocol fuzzing. We use the knowledge of the LLMs about protocol message types for well-known protocols. We also checked the LLM's capability in detecting ``states" for stateful protocol implementations by generating sequences of messages and predicting response codes. Based on these observations, we have developed an LLM-guided protocol implementation fuzzing engine. Our protocol fuzzer ChatAFL constructs grammars for each message type in a protocol, and then mutates messages or predicts the next messages in a message sequence via interactions with LLMs. Experiments on a wide range of real-world protocols from ProFuzzbench show significant efficacy in state and code coverage. Our LLM-guided stateful fuzzer was compared with state-of-the-art fuzzers AFLNet and NSFuzz. ChatAFL covers 47.6% and 42.7% more state transitions, 29.6% and 25.8% more states, and 5.8% and 6.7% more code, respectively. Apart from enhanced coverage, ChatAFL discovered nine distinct and previously unknown vulnerabilities in widely-used and extensively-tested protocol implementations while AFLNet and NSFuzz only discover three and four of them, respectively.
+
 ### Prompt Fuzzing for Fuzz Driver Generation, *CCS'24, Peng Chen*
 - [paper](https://arxiv.org/pdf/2312.17677)
 - [code](https://github.com/PromptFuzz/PromptFuzz)
@@ -56,6 +68,7 @@ Crafting high-quality fuzz drivers not only is time-consuming but also requires 
 - [code](https://github.com/fuzz4all/fuzz4all)
 
 > Generate code by LLM to test target compiler/solver/...
+> GPT4 to summarize code, StarCoder-15B to generate code snippet
 
 ![Framework](img/Fuzz4All.png)
 
@@ -73,11 +86,12 @@ Fuzzing has achieved tremendous success in discovering bugs and vulnerabilities 
 **Abstract:** 
 Bugs in operating system kernels can affect billions of devices and users all over the world. As a result, a large body of research has been focused on kernel fuzzing, i.e., automatically generating syscall (system call) sequences to detect potential kernel bugs or vulnerabilities. Syzkaller, one of the most widely studied kernel fuzzers, aims to generate valid syscall sequences based on predefined specifications written in syzlang, a domain-specific language for defining syscalls, their arguments, and the relationships between them. While there has been existing work trying to automate Syzkaller specification generation, this still remains largely manual work and a large number of important syscalls are still uncovered. In this paper, we propose KernelGPT, the first approach to automatically inferring Syzkaller specifications via Large Language Models (LLMs) for enhanced kernel fuzzing. Our basic insight is that LLMs have seen massive kernel code, documentation, and use cases during pre-training, and thus can automatically distill the necessary information for making valid syscalls. More specifically, KernelGPT leverages an iterative approach to automatically infer all the necessary specification components, and further leverages the validation feedback to repair/refine the initial specifications. Our preliminary results demonstrate that KernelGPT can help Syzkaller achieve higher coverage and find multiple previously unknown bugs. Moreover, we also received a request from the Syzkaller team to upstream specifications inferred by KernelGPT.
 
-### White-box Compiler Fuzzing Empowered by Large Language Models, *Arxiv'23, Lingming Zhang*
+### WhiteFox: White-Box Compiler Fuzzing Empowered by Large Language Models, *OOPSLA'24, Lingming Zhang*
 - [paper](https://arxiv.org/abs/2310.15991)
 - [code](https://github.com/ise-uiuc/WhiteFox)
 
 > Generate code snippets by LLM to test the DL/C/C++ compilers
+> GPT4 to summarize code, StarCoder-15B to generate code snippet
 >> Subset of Fuzz4All? 
 
 ![Overview](img/WhiteFox.png)
@@ -86,10 +100,10 @@ Bugs in operating system kernels can affect billions of devices and users all ov
 Compiler correctness is crucial, as miscompilation falsifying the program behaviors can lead to serious consequences. In the literature, fuzzing has been extensively studied to uncover compiler defects. However, compiler fuzzing remains challenging: Existing arts focus on black- and grey-box fuzzing, which generates tests without sufficient understanding of internal compiler behaviors. As such, they often fail to construct programs to exercise conditions of intricate optimizations. Meanwhile, traditional white-box techniques are computationally inapplicable to the giant codebase of compilers. Recent advances demonstrate that Large Language Models (LLMs) excel in code generation/understanding tasks and have achieved state-of-the-art performance in black-box fuzzing. Nonetheless, prompting LLMs with compiler source-code information remains a missing piece of research in compiler testing.
 To this end, we propose WhiteFox, the first white-box compiler fuzzer using LLMs with source-code information to test compiler optimization. WhiteFox adopts a dual-model framework: (i) an analysis LLM examines the low-level optimization source code and produces requirements on the high-level test programs that can trigger the optimization; (ii) a generation LLM produces test programs based on the summarized requirements. Additionally, optimization-triggering tests are used as feedback to further enhance the test generation on the fly. Our evaluation on four popular compilers shows that WhiteFox can generate high-quality tests to exercise deep optimizations requiring intricate conditions, practicing up to 80 more optimizations than state-of-the-art fuzzers. To date, WhiteFox has found in total 96 bugs, with 80 confirmed as previously unknown and 51 already fixed. Beyond compiler testing, WhiteFox can also be adapted for white-box fuzzing of other complex, real-world software systems in general.
 
-
-### Large language models are edge-case fuzzers: Testing deep learning libraries via FuzzGPT, *Arxiv’23, Lingming Zhang*
-- [Paper](https://arxiv.org/abs/2304.02014)
-<!-- - [Code]() -->
+### Large Language Models are Edge-Case Generators: Crafting Unusual Programs for Fuzzing Deep Learning Libraries, *ICSE'24, Lingming Zhang*
+- [Arxiv Paper](https://arxiv.org/abs/2304.02014)
+- [Conference Paper](https://dl.acm.org/doi/abs/10.1145/3597503.3623343)
+- [Code](https://github.com/ise-uiuc/FuzzGPT)
 
 > Fuzz Driver Generated by LLM  
 > Historical bug information given
@@ -127,6 +141,25 @@ This paper demonstrates that modern titanic LLMs can be leveraged to directly pe
 
 ## Fuzzing (Traditional AI Method)
 
+### Evaluating and Improving Neural Program-Smoothing-based Fuzzing, *ICSE’22, Lingming Zhang*
+- [Paper](https://i.cs.hku.hk/~heming/papers/icse22-program-smooth-fuzzing.pdf)
+- [Code](https://github.com/PoShaung/program-smoothing-fuzzing)
+
+> Improving Neuzz & MTFuzz  
+> Resource-Efficient Edge Selection Mechanism  
+> Probabilistic Byte Selection Mechanism
+
+**Abstract:** Fuzzing nowadays has been commonly modeled as an optimization problem, e.g., maximizing code coverage under a given time budget via typical search-based solutions such as evolutionary algorithms. However, such solutions are widely argued to cause inefficient computing resource usage, i.e., inefficient mutations. To address this issue, two neural program-smoothing-based fuzzers, Neuzz and MTFuzz, have been recently proposed to approximate program branching behaviors via neural network models, which input byte sequences of a seed and output vectors representing program branching behaviors. Moreover, assuming that mutating the bytes with larger gradients can better explore branching behaviors, they develop strategies to mutate such bytes for generating new seeds as test cases. Meanwhile, although they have been shown to be effective in the original papers, they were only evaluated upon a limited dataset. In addition, it is still unclear how their key technical components and whether other factors can impact fuzzing performance. To further investigate neural program-smoothing-based fuzzing, we first construct a large-scale benchmark suite with a total of 28 popular open-source projects. Then, we extensively evaluate Neuzz and MTFuzz on such benchmarks. The evaluation results suggest that their edge coverage performance can be unstable. Moreover, neither neural network models nor mutation strategies can be consistently effective, and the power of their gradient-guidance mechanisms have been compromised. Inspired by such findings, we propose a simplistic technique, PreFuzz, which improves neural program-smoothing-based fuzzers with a resource-efficient edge selection mechanism to enhance their gradient guidance and a probabilistic byte selection mechanism to further boost mutation effectiveness. Our evaluation results indicate that PreFuzz can significantly increase the edge coverage of Neuzz/MTFuzz, and also reveal multiple practical guidelines to advance future research on neural program-smoothing-based fuzzing.
+
+### MTFuzz: Fuzzing with a multi-task neural network, *ECSE/FSE‘20, Dongdong She*
+- [Paper](https://arxiv.org/abs/2005.12392)
+- [Code](https://github.com/rahlk/MTFuzz)
+
+> Call Stack + Edge Coverage  
+> 4 Dense + 4 Activation
+
+**Abstract:** Fuzzing is a widely used technique for detecting software bugs and vulnerabilities. Most popular fuzzers generate new inputs using an evolutionary search to maximize code coverage. Essentially, these fuzzers start with a set of seed inputs, mutate them to generate new inputs, and identify the promising inputs using an evolutionary fitness function for further mutation. Despite their success, evolutionary fuzzers tend to get stuck in long sequences of unproductive mutations. In recent years, machine learning (ML) based mutation strategies have reported promising results. However, the existing ML-based fuzzers are limited by the lack of quality and diversity of the training data. As the input space of the target programs is high dimensional and sparse, it is prohibitively expensive to collect many diverse samples demonstrating successful and unsuccessful mutations to train the model. In this paper, we address these issues by using a Multi-Task Neural Network that can learn a compact embedding of the input space based on diverse training samples for multiple related tasks (i.e., predicting for different types of coverage). The compact embedding can guide the mutation process by focusing most of the mutations on the parts of the embedding where the gradient is high. MTFuzz uncovers 11 previously unseen bugs and achieves an average of 2× more edge coverage compared with 5 state-of-the-art fuzzer on 10 real-world programs.
+
 ### Neuzz: Efficient fuzzing with neural program smoothing, *SP‘19, Dongdong She*
 - [Paper](https://arxiv.org/abs/1807.05620)
 - [Code](https://github.com/dongdongshe/neuzz) 
@@ -138,37 +171,12 @@ This paper demonstrates that modern titanic LLMs can be leveraged to directly pe
 However, gradient-guided approaches are not directly applicable to fuzzing as real-world program behaviors contain many discontinuities, plateaus, and ridges where the gradient- based methods often get stuck. We observe that this problem can be addressed by creating a smooth surrogate function approximating the target program’s discrete branching behavior. In this paper, we propose a novel program smoothing technique using surrogate neural network models that can incrementally learn smooth approximations of a complex, real-world program’s branching behaviors. We further demonstrate that such neural network models can be used together with gradient-guided input generation schemes to significantly increase the efficiency of the fuzzing process.
 Our extensive evaluations demonstrate that NEUZZ significantly outperforms 10 state-of-the-art graybox fuzzers on 10 popular real-world programs both at finding new bugs and achieving higher edge coverage. NEUZZ found 31 previously unknown bugs (including two CVEs) that other fuzzers failed to find in 10 real-world programs and achieved 3X more edge coverage than all of the tested graybox fuzzers over 24 hour runs. Furthermore, NEUZZ also outperformed existing fuzzers on both LAVA-M and DARPA CGC bug datasets.
 
-### MTFuzz: Fuzzing with a multi-task neural network, *ECSE/FSE‘20, Dongdong She*
-- [Paper](https://arxiv.org/abs/2005.12392)
-- [Code](https://github.com/rahlk/MTFuzz)
-
-> Call Stack + Edge Coverage  
-> 4 Dense + 4 Activation
-
-**Abstract:** Fuzzing is a widely used technique for detecting software bugs and vulnerabilities. Most popular fuzzers generate new inputs using an evolutionary search to maximize code coverage. Essentially, these fuzzers start with a set of seed inputs, mutate them to generate new inputs, and identify the promising inputs using an evolutionary fitness function for further mutation. Despite their success, evolutionary fuzzers tend to get stuck in long sequences of unproductive mutations. In recent years, machine learning (ML) based mutation strategies have reported promising results. However, the existing ML-based fuzzers are limited by the lack of quality and diversity of the training data. As the input space of the target programs is high dimensional and sparse, it is prohibitively expensive to collect many diverse samples demonstrating successful and unsuccessful mutations to train the model. In this paper, we address these issues by using a Multi-Task Neural Network that can learn a compact embedding of the input space based on diverse training samples for multiple related tasks (i.e., predicting for different types of coverage). The compact embedding can guide the mutation process by focusing most of the mutations on the parts of the embedding where the gradient is high. MTFuzz uncovers 11 previously unseen bugs and achieves an average of 2× more edge coverage compared with 5 state-of-the-art fuzzer on 10 real-world programs.
-
-### Evaluating and Improving Neural Program-Smoothing-based Fuzzing, *ICSE’22, Lingming Zhang*
-- [Paper](https://i.cs.hku.hk/~heming/papers/icse22-program-smooth-fuzzing.pdf)
-- [Code](https://github.com/PoShaung/program-smoothing-fuzzing)
-
-> Improving Neuzz & MTFuzz  
-> Resource-Efficient Edge Selection Mechanism  
-> Probabilistic Byte Selection Mechanism
-
-**Abstract:** Fuzzing nowadays has been commonly modeled as an optimization problem, e.g., maximizing code coverage under a given time budget via typical search-based solutions such as evolutionary algorithms. However, such solutions are widely argued to cause inefficient computing resource usage, i.e., inefficient mutations. To address this issue, two neural program-smoothing-based fuzzers, Neuzz and MTFuzz, have been recently proposed to approximate program branching behaviors via neural network models, which input byte sequences of a seed and output vectors representing program branching behaviors. Moreover, assuming that mutating the bytes with larger gradients can better explore branching behaviors, they develop strategies to mutate such bytes for generating new seeds as test cases. Meanwhile, although they have been shown to be effective in the original papers, they were only evaluated upon a limited dataset. In addition, it is still unclear how their key technical components and whether other factors can impact fuzzing performance. To further investigate neural program-smoothing-based fuzzing, we first construct a large-scale benchmark suite with a total of 28 popular open-source projects. Then, we extensively evaluate Neuzz and MTFuzz on such benchmarks. The evaluation results suggest that their edge coverage performance can be unstable. Moreover, neither neural network models nor mutation strategies can be consistently effective, and the power of their gradient-guidance mechanisms have been compromised. Inspired by such findings, we propose a simplistic technique, PreFuzz, which improves neural program-smoothing-based fuzzers with a resource-efficient edge selection mechanism to enhance their gradient guidance and a probabilistic byte selection mechanism to further boost mutation effectiveness. Our evaluation results indicate that PreFuzz can significantly increase the edge coverage of Neuzz/MTFuzz, and also reveal multiple practical guidelines to advance future research on neural program-smoothing-based fuzzing.
-
 ## Unit Test Generation (LLM)
 
-### Code Generation Tools (Almost) for Free? A Study of Few-Shot, Pre-Trained Language Models on Code, *Arxiv’22*
-- [Paper](https://arxiv.org/abs/2206.01335)
-
-> Codex for Unit Test Generation
-
-**Abstract:** Few-shot learning with large-scale, pre-trained language models is a powerful way to answer questions about code, e.g., how to complete a given code example, or even generate code snippets from scratch. The success of these models raises the question whether they could serve as a basis for building a wide range code generation tools. Traditionally, such tools are built manually and separately for each task. Instead, few-shot learning may allow to obtain different tools from a single pre-trained language model by simply providing a few examples or a natural language description of the expected tool behavior. This paper studies to what extent a state-of-the-art, pre-trained language model of code, Codex, may serve this purpose. We consider three code manipulation and code generation tasks targeted by a range of traditional tools: (i) code mutation; (ii) test oracle generation from natural language documentation; and (iii) test case generation. For each task, we compare few-shot learning to a manually built tool. Our results show that the model-based tools complement (code mutation), are on par (test oracle generation), or even outperform their respective traditionally built tool (test case generation), while imposing far less effort to develop them. By comparing the effectiveness of different variants of the model-based tools, we provide insights on how to design an appropriate input ("prompt") to the model and what influence the size of the model has. For example, we find that providing a small natural language description of the code generation task is an easy way to improve predictions. Overall, we conclude that few-shot language models are surprisingly effective, yet there is still more work to be done, such as exploring more diverse ways of prompting and tackling even more involved tasks.
-
-### ChatUniTest: a ChatGPT-based automated unit test generation tool, *Arxiv'23*
-- [Paper](https://arxiv.org/abs/2305.04764)
-- [Code](https://github.com/ZJU-ACES-ISE/chatunitest-maven-plugin)
+### ChatUniTest: A Framework for LLM-Based Test Generation, *FSE'24*
+- [Paper/Short](https://arxiv.org/abs/2305.04764)
+- [Paper/Long](https://arxiv.org/abs/2305.04764v1)
+- [Code](https://github.com/ZJU-ACES-ISE/ChatUniTest)
 
 > ChatGPT for Unit Test Generation
 
@@ -179,6 +187,13 @@ Our extensive evaluations demonstrate that NEUZZ significantly outperforms 10 st
 - [Code](https://github.com/microsoft/codamosa)
 
 **Abstract:** Search-based software testing (SBST) generates high-coverage test cases for programs under test with a combination of test case generation and mutation. SBST’s performance relies on there being a reasonable probability of generating test cases that exercise the core logic of the program under test. Given such test cases, SBST can then explore the space around them to exercise various parts of the program. This paper explores whether Large Language Models (LLMs) of code, such as OpenAI’s Codex, can be used to help SBST’s exploration. Our proposed algorithm, CODAMOSA, conducts SBST until its coverage improvements stall, then asks Codex to provide example test cases for under-covered functions. These examples help SBST redirect its search to more useful areas of the search space. On an evaluation over 486 benchmarks, CODAMOSA achieves statistically significantly higher coverage on many more benchmarks (173 and 279) than it reduces coverage on (10 and 4), compared to SBST and LLM-only baselines.
+
+### Code Generation Tools (Almost) for Free? A Study of Few-Shot, Pre-Trained Language Models on Code, *Arxiv’22*
+- [Paper](https://arxiv.org/abs/2206.01335)
+
+> Codex for Unit Test Generation
+
+**Abstract:** Few-shot learning with large-scale, pre-trained language models is a powerful way to answer questions about code, e.g., how to complete a given code example, or even generate code snippets from scratch. The success of these models raises the question whether they could serve as a basis for building a wide range code generation tools. Traditionally, such tools are built manually and separately for each task. Instead, few-shot learning may allow to obtain different tools from a single pre-trained language model by simply providing a few examples or a natural language description of the expected tool behavior. This paper studies to what extent a state-of-the-art, pre-trained language model of code, Codex, may serve this purpose. We consider three code manipulation and code generation tasks targeted by a range of traditional tools: (i) code mutation; (ii) test oracle generation from natural language documentation; and (iii) test case generation. For each task, we compare few-shot learning to a manually built tool. Our results show that the model-based tools complement (code mutation), are on par (test oracle generation), or even outperform their respective traditionally built tool (test case generation), while imposing far less effort to develop them. By comparing the effectiveness of different variants of the model-based tools, we provide insights on how to design an appropriate input ("prompt") to the model and what influence the size of the model has. For example, we find that providing a small natural language description of the code generation task is an easy way to improve predictions. Overall, we conclude that few-shot language models are surprisingly effective, yet there is still more work to be done, such as exploring more diverse ways of prompting and tackling even more involved tasks.
 
 ## Unit Test Case Generation (Traditional AI Method)
 
@@ -244,24 +259,7 @@ In this paper, we aim to revisit the learning-based APR problem, and propose Alp
 
 ## Code Representation
 
-### Convolutional Neural Networks over Tree Structures for Programming Language Processing, *AAAI'16*
-- [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/10139)
-<!-- - [Code]() -->
-
-> AST Based
-
-**Abstract:** Programming language processing (similar to natural language processing) is a hot research topic in the field of software engineering; it has also aroused growing interest in the artificial intelligence community. However, different from a natural language sentence, a program contains rich, explicit, and complicated structural information. Hence, traditional NLP models may be inappropriate for programs. In this paper, we propose a novel tree-based convolutional neural network (TBCNN) for programming language processing, in which a convolution kernel is designed over programs' abstract syntax trees to capture structural information. TBCNN is a generic architecture for programming language processing; our experiments show its effectiveness in two different program analysis tasks: classifying programs according to functionality, and detecting code snippets of certain patterns. TBCNN outperforms baseline methods, including several neural models for NLP.
-
-### Graphcodebert: Pre-training code representations with data flow, *ICLR'21, Microsoft Research Asia*
-
-- [Paper](https://arxiv.org/abs/2009.08366)
-- [Code](https://github.com/microsoft/CodeBERT)
-
-> CFG+DFG Based
-
-**Abstract:** Pre-trained models for programming language have achieved dramatic empirical improvements on a variety of code-related tasks such as code search, code completion, code summarization, etc. However, existing pre-trained models regard a code snippet as a sequence of tokens, while ignoring the inherent structure of code, which provides crucial code semantics and would enhance the code understanding process. We present GraphCodeBERT, a pre-trained model for programming language that considers the inherent structure of code. Instead of taking syntactic-level structure of code like abstract syntax tree (AST), we use data flow in the pre-training stage, which is a semantic-level structure of code that encodes the relation of "where-the-value-comes-from" between variables. Such a semantic-level structure is neat and does not bring an unnecessarily deep hierarchy of AST, the property of which makes the model more efficient. We develop GraphCodeBERT based on Transformer. In addition to using the task of masked language modeling, we introduce two structure-aware pre-training tasks. One is to predict code structure edges, and the other is to align representations between source code and code structure. We implement the model in an efficient way with a graph-guided masked attention function to incorporate the code structure. We evaluate our model on four tasks, including code search, clone detection, code translation, and code refinement. Results show that code structure and newly introduced pre-training tasks can improve GraphCodeBERT and achieves state-of-the-art performance on the four downstream tasks. We further show that the model prefers structure-level attentions over token-level attentions in the task of code search.
-
-### Structcoder: Structure-aware transformer for code generation, *arXiv'22*
+### Structcoder: Structure-aware transformer for code generation, *TKDD'24*
 - [Paper](https://arxiv.org/abs/2206.05239)
 - [Code](https://github.com/reddy-lab-code-research/StructCoder/)
 
@@ -276,6 +274,23 @@ In this paper, we aim to revisit the learning-based APR problem, and propose Alp
 > AST Based
 
 **Abstract:** Pre-trained models for programming languages have recently demonstrated great success on code intelligence. To support both code-related understanding and generation tasks, recent works attempt to pre-train unified encoder-decoder models. However, such encoder-decoder framework is sub-optimal for auto-regressive tasks, especially code completion that requires a decoder-only manner for efficient inference. In this paper, we present UniXcoder, a unified cross-modal pre-trained model for programming language. The model utilizes mask attention matrices with prefix adapters to control the behavior of the model and leverages cross-modal contents like AST and code comment to enhance code representation. To encode AST that is represented as a tree in parallel, we propose a one-to-one mapping method to transform AST in a sequence structure that retains all structural information from the tree. Furthermore, we propose to utilize multi-modal contents to learn representation of code fragment with contrastive learning, and then align representations among programming languages using a cross-modal generation task. We evaluate UniXcoder on five code-related tasks over nine datasets. To further evaluate the performance of code fragment representation, we also construct a dataset for a new task, called zero-shot code-to-code search. Results show that our model achieves state-of-the-art performance on most tasks and analysis reveals that comment and AST can both enhance UniXcoder.
+
+### Graphcodebert: Pre-training code representations with data flow, *ICLR'21, Microsoft Research Asia*
+
+- [Paper](https://arxiv.org/abs/2009.08366)
+- [Code](https://github.com/microsoft/CodeBERT)
+
+> CFG+DFG Based
+
+**Abstract:** Pre-trained models for programming language have achieved dramatic empirical improvements on a variety of code-related tasks such as code search, code completion, code summarization, etc. However, existing pre-trained models regard a code snippet as a sequence of tokens, while ignoring the inherent structure of code, which provides crucial code semantics and would enhance the code understanding process. We present GraphCodeBERT, a pre-trained model for programming language that considers the inherent structure of code. Instead of taking syntactic-level structure of code like abstract syntax tree (AST), we use data flow in the pre-training stage, which is a semantic-level structure of code that encodes the relation of "where-the-value-comes-from" between variables. Such a semantic-level structure is neat and does not bring an unnecessarily deep hierarchy of AST, the property of which makes the model more efficient. We develop GraphCodeBERT based on Transformer. In addition to using the task of masked language modeling, we introduce two structure-aware pre-training tasks. One is to predict code structure edges, and the other is to align representations between source code and code structure. We implement the model in an efficient way with a graph-guided masked attention function to incorporate the code structure. We evaluate our model on four tasks, including code search, clone detection, code translation, and code refinement. Results show that code structure and newly introduced pre-training tasks can improve GraphCodeBERT and achieves state-of-the-art performance on the four downstream tasks. We further show that the model prefers structure-level attentions over token-level attentions in the task of code search.
+
+### Convolutional Neural Networks over Tree Structures for Programming Language Processing, *AAAI'16*
+- [Paper](https://ojs.aaai.org/index.php/AAAI/article/view/10139)
+<!-- - [Code]() -->
+
+> AST Based
+
+**Abstract:** Programming language processing (similar to natural language processing) is a hot research topic in the field of software engineering; it has also aroused growing interest in the artificial intelligence community. However, different from a natural language sentence, a program contains rich, explicit, and complicated structural information. Hence, traditional NLP models may be inappropriate for programs. In this paper, we propose a novel tree-based convolutional neural network (TBCNN) for programming language processing, in which a convolution kernel is designed over programs' abstract syntax trees to capture structural information. TBCNN is a generic architecture for programming language processing; our experiments show its effectiveness in two different program analysis tasks: classifying programs according to functionality, and detecting code snippets of certain patterns. TBCNN outperforms baseline methods, including several neural models for NLP.
 
 ## Code Generation
 
